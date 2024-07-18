@@ -5,8 +5,8 @@ namespace Player {
 	enum class PlayerState;
 	class PlayerController {
 	private:
-		PlayerModel* playerModel;
-		PlayerView* playerView;
+		PlayerModel* playe_model;
+		PlayerView* player_view;
 
 		void destroy();
 
@@ -19,6 +19,6 @@ namespace Player {
 		void render();
 
 		PlayerState getPlayerState();
-		void setPlayerState(PlayerState newPlayerState);
+		void setPlayerState(PlayerState new_player_state);
 	};
 }

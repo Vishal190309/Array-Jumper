@@ -9,25 +9,25 @@ namespace Player {
 	}
 	void PlayerModel::initialize()
 	{
-		playerState = PlayerState::ALIVE;
+		player_state = PlayerState::ALIVE;
 	}
 	void PlayerModel::update()
 	{
 	}
 	int PlayerModel::getCurrentPosition()
 	{
-		return currentPosition;
+		return current_position;
 	}
 	void PlayerModel::setCurrentPosition(int position)
 	{
-		currentPosition = position;
+		current_position = position;
 	}
 	PlayerState PlayerModel::getPlayerState()
 	{
-		return playerState;
+		return player_state;
 	}
 	void PlayerModel::setPlayerState(PlayerState state)
 	{
-		playerState = state;
+		player_state = state;
 	}
 }

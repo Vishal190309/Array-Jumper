@@ -10,11 +10,11 @@ namespace Player {
 	using namespace Global;
 	void PlayerView::initializePlayerImage()
 	{
-		playerImage->initialize(Config::character_texture_path, playerWidth, playerHeight, sf::Vector2f(0.f, 0.f));
+		player_image->initialize(Config::character_texture_path, player_width, player_height, sf::Vector2f(0.f, 0.f));
 	}
 	void PlayerView::drawPlayer()
 	{
-		playerImage->render();
+		player_image->render();
 	}
 	void PlayerView::loadPlayer()
 	{
@@ -23,8 +23,8 @@ namespace Player {
 	}
 	void PlayerView::calculatePlayerDimensions()
 	{
-		playerWidth = 1000.f;
-		playerHeight = 1000.f;
+		player_width = 1000.f;
+		player_height = 1000.f;
 	}
 	sf::Vector2f PlayerView::calulcatePlayerPosition()
 	{
@@ -32,20 +32,20 @@ namespace Player {
 	}
 	void PlayerView::updatePlayerPosition()
 	{
-		playerImage->setPosition(calulcatePlayerPosition());
+		player_image->setPosition(calulcatePlayerPosition());
 	}
 	PlayerView::PlayerView(PlayerController* controller)
 	{
-		playerController = controller;
-		gameWindow = nullptr;
-		playerImage = new ImageView();
+		player_controller = controller;
+		game_window = nullptr;
+		player_image = new ImageView();
 	}
 	PlayerView::~PlayerView()
 	{
 	}
 	void PlayerView::initialize()
 	{
-		gameWindow = Global::ServiceLocator::getInstance()->getGraphicService()->getGameWindow();
+		game_window = Global::ServiceLocator::getInstance()->getGraphicService()->getGameWindow();
 		loadPlayer();
 	}
 	void PlayerView::update()
@@ -54,7 +54,7 @@ namespace Player {
 	}
 	void PlayerView::render()
 	{
-		switch (playerController->getPlayerState())
+		switch (player_controller->getPlayerState())
 		{
 		case PlayerState::ALIVE:
 			drawPlayer();

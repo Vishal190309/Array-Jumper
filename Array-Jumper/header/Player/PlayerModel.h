@@ -7,8 +7,8 @@ namespace Player {
 
 	class PlayerModel {
 	private:
-		int currentPosition;
-		PlayerState playerState;
+		int current_position;
+		PlayerState player_state;
 	public:
 		PlayerModel();
 		~PlayerModel();

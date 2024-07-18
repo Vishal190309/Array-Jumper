@@ -3,12 +3,12 @@
 namespace Player {
 	class PlayerView {
 	private:
-		UI::UIElement::ImageView* playerImage;
-		sf::RenderWindow* gameWindow;
-		class PlayerController* playerController;
+		UI::UIElement::ImageView* player_image;
+		sf::RenderWindow* game_window;
+		class PlayerController* player_controller;
 
-		float playerWidth;
-		float playerHeight;
+		float player_width;
+		float player_height;
 
 
 		void initializePlayerImage(); //Initialize player_image 

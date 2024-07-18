@@ -4,7 +4,7 @@ namespace Player {
 	class PlayerService
 	{
 	private:
-		PlayerController* playerController;
+		PlayerController* playe_controller;
 
 		void destroy();
 

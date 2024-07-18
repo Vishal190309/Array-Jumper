@@ -3,24 +3,24 @@
 
 namespace Player
 {
-	PlayerService::PlayerService() { playerController = new PlayerController(); }
+	PlayerService::PlayerService() { playe_controller = new PlayerController(); }
 
 	PlayerService::~PlayerService() { destroy(); }
 
 	void PlayerService::initialize()
 	{
-		playerController->initialize();
+		playe_controller->initialize();
 	}
 
 	void PlayerService::update()
 	{
-		playerController->update();
+		playe_controller->update();
 	}
 
 	void PlayerService::render()
 	{
-		playerController->render();
+		playe_controller->render();
 	}
 
-	void PlayerService::destroy() { delete(playerController); }
+	void PlayerService::destroy() { delete(playe_controller); }
 }
