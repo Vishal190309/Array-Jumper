@@ -1,9 +1,11 @@
 #pragma once
+#include "../../header/UI/UIElement/ImageView.h"
 namespace Player {
 	class PlayerView {
 	private:
 		UI::UIElement::ImageView* playerImage;
 		sf::RenderWindow* gameWindow;
+		class PlayerController* playerController;
 
 		float playerWidth;
 		float playerHeight;
@@ -17,7 +19,7 @@ namespace Player {
 		void updatePlayerPosition();
 
 	public:
-		PlayerView(PlayerController* playerController);
+		PlayerView(PlayerController* controller);
 		~PlayerView();
 
 		void initialize();

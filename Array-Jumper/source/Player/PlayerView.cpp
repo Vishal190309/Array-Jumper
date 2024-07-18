@@ -1,4 +1,6 @@
 #include "../../header/Player/PlayerView.h"
+#include "../../header/Player/PlayerController.h"
+#include "../../header/Player/PlayerModel.h"
 #include "../../header/UI/UIElement/ImageView.h"
 #include "../../header/Global/Config.h"
 #include "../../header/Global/ServiceLocator.h"
@@ -22,7 +24,7 @@ namespace Player {
 	void PlayerView::calculatePlayerDimensions()
 	{
 		playerWidth = 1000.f;
-		playerHeight = 100.f;
+		playerHeight = 1000.f;
 	}
 	sf::Vector2f PlayerView::calulcatePlayerPosition()
 	{
@@ -32,8 +34,9 @@ namespace Player {
 	{
 		playerImage->setPosition(calulcatePlayerPosition());
 	}
-	PlayerView::PlayerView(PlayerController* playerController)
+	PlayerView::PlayerView(PlayerController* controller)
 	{
+		playerController = controller;
 		gameWindow = nullptr;
 		playerImage = new ImageView();
 	}
@@ -51,6 +54,13 @@ namespace Player {
 	}
 	void PlayerView::render()
 	{
-		
+		switch (playerController->getPlayerState())
+		{
+		case PlayerState::ALIVE:
+			drawPlayer();
+			break;
+		default:
+			break;
+		}
 	}
 }

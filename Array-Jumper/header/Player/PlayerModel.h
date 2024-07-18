@@ -10,6 +10,10 @@ namespace Player {
 		int currentPosition;
 		PlayerState playerState;
 	public:
+		PlayerModel();
+		~PlayerModel();
+		void initialize();
+		void update();
 		int getCurrentPosition();
 		void setCurrentPosition(int position);
 

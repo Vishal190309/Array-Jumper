@@ -1,6 +1,19 @@
 #include "../../header/Player/PlayerModel.h"
 
 namespace Player {
+	PlayerModel::PlayerModel()
+	{
+	}
+	PlayerModel::~PlayerModel()
+	{
+	}
+	void PlayerModel::initialize()
+	{
+		playerState = PlayerState::ALIVE;
+	}
+	void PlayerModel::update()
+	{
+	}
 	int PlayerModel::getCurrentPosition()
 	{
 		return currentPosition;
