@@ -22,6 +22,7 @@ namespace Player {
 		void initialize();
 		void update();
 		void render();
+		void reset();
 		void readInput();
 		void move(MovementDirection direction);
 		void jump(MovementDirection direction);

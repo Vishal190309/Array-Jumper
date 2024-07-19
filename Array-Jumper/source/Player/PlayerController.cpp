@@ -36,6 +36,11 @@ namespace Player {
 		player_view->render();
 	}
 
+	void PlayerController::reset()
+	{
+		player_model->resetPlayer();
+	}
+
 	void PlayerController::readInput()
 	{
 		if (event_service->pressedRightArrowKey() || event_service->pressedDKey())
@@ -104,6 +109,7 @@ namespace Player {
 			return;
 
 		player_model->setCurrentPosition(targetPosition);
+		Global::ServiceLocator::getInstance()->getGameplayService()->onPositionChanged(targetPosition);
 		Global::ServiceLocator::getInstance()->getSoundService()->playSound(Sound::SoundType::JUMP);
 	}
 

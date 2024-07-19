@@ -9,6 +9,8 @@ namespace Gameplay {
 
 		void initialize();
 		bool isObstacle(Level::BlockType value);
+		bool isEndBlock(Level::BlockType value);
+		void processEndBlock();
 		void processObstacle();
 		void onPositionChanged(int position);
 	};
