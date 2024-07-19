@@ -7,6 +7,9 @@ namespace Gameplay {
 		bool isObstacle(Level::BlockType value);
 		bool isEndBlock(Level::BlockType value);
 		void processEndBlock();
+		bool isLastLevel();
+		void gameWon();
+		void loadNextLevel();
 		void processObstacle();
 		void gameOver();
 	public:
