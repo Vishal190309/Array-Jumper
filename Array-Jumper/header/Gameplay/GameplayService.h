@@ -3,7 +3,7 @@
 namespace Gameplay {
 	class GameplayService {
 	private:
-		GameplayController* gameplayController;
+		GameplayController* gameplay_controller;
 	public:
 		GameplayService();
 		~GameplayService();
@@ -11,5 +11,6 @@ namespace Gameplay {
 		void initialize();
 
 		void onPositionChanged(int position);
+		void onDeath();
 	};
 }

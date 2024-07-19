@@ -3,15 +3,18 @@
 namespace Gameplay {
 	class GameplayController {
 	private:
+
+		bool isObstacle(Level::BlockType value);
+		bool isEndBlock(Level::BlockType value);
+		void processEndBlock();
+		void processObstacle();
+		void gameOver();
 	public:
 		GameplayController();
 		~GameplayController();
 
 		void initialize();
-		bool isObstacle(Level::BlockType value);
-		bool isEndBlock(Level::BlockType value);
-		void processEndBlock();
-		void processObstacle();
 		void onPositionChanged(int position);
+		void onDeath();
 	};
 }

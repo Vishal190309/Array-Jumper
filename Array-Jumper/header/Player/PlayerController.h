@@ -28,10 +28,13 @@ namespace Player {
 		void jump(MovementDirection direction);
 		bool isPositionInBound(int targetPosition);
 		void takeDamage();
+		void onDeath();
 		int getCurrentPosition();
 
 		PlayerState getPlayerState();
 		void setPlayerState(PlayerState new_player_state);
+
+		int getCurrentLives();
 
 	};
 }

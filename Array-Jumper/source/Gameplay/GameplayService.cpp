@@ -3,18 +3,22 @@
 namespace Gameplay {
 	GameplayService::GameplayService()
 	{
-		gameplayController = new GameplayController();
+		gameplay_controller = new GameplayController();
 	}
 	GameplayService::~GameplayService()
 	{
-		delete(gameplayController);
+		delete(gameplay_controller);
 	}
 	void GameplayService::initialize()
 	{
-		gameplayController->initialize();
+		gameplay_controller->initialize();
 	}
 	void GameplayService::onPositionChanged(int position)
 	{
-		gameplayController->onPositionChanged(position);
+		gameplay_controller->onPositionChanged(position);
+	}
+	void GameplayService::onDeath() 
+	{ 
+		gameplay_controller->onDeath(); 
 	}
 }

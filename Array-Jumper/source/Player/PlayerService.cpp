@@ -32,4 +32,8 @@ namespace Player
 	{
 		player_controller->reset();
 	}
+	int PlayerService::getCurrentLives()
+	{
+		return player_controller->getCurrentLives();;
+	}
 }
