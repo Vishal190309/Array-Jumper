@@ -16,6 +16,7 @@ namespace Global
     const sf::String Config::outscal_logo_texture_path = "assets/textures/outscal_logo.png";
     const sf::String Config::play_button_texture_path = "assets/textures/play_button.png";
     const sf::String Config::quit_button_texture_path = "assets/textures/quit_button.png";
+    const sf::String Config::target_texture_path = "assets/textures/target.png";
 
     // Fonts
     const sf::String Config::bubble_bobble_font_path = "assets/fonts/bubbleBobble.ttf";
