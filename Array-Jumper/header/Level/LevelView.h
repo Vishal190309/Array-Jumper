@@ -25,6 +25,9 @@ namespace Level
 
 		void createImages();
 		void calculateBoxDimensions();
+		void calculateBoxWidthHeight();
+		void calculateBoxSpacing();
+		sf::Vector2f calculateBoxPosition(int index);
 		void initializeImages();
 		void updateImages();
 		void drawLevel();
