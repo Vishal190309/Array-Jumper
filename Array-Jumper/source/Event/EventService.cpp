@@ -90,13 +90,13 @@ namespace Event
 
     bool EventService::pressedEscapeKey() { return game_event.key.code == sf::Keyboard::Escape; }
 
-    bool EventService::pressedLeftArrowKey() { return left_arrow_button_state == ButtonState::HELD; }
+    bool EventService::pressedLeftArrowKey() { return left_arrow_button_state == ButtonState::PRESSED; }
 
-    bool EventService::pressedRightArrowKey() { return right_arrow_button_state == ButtonState::HELD; }
+    bool EventService::pressedRightArrowKey() { return right_arrow_button_state == ButtonState::PRESSED; }
 
-    bool EventService::pressedAKey() { return A_button_state == ButtonState::HELD; }
+    bool EventService::pressedAKey() { return A_button_state == ButtonState::PRESSED; }
 
-    bool EventService::pressedDKey() { return D_button_state == ButtonState::HELD; }
+    bool EventService::pressedDKey() { return D_button_state == ButtonState::PRESSED; }
 
     bool EventService::pressedLeftMouseButton() { return left_mouse_button_state == ButtonState::PRESSED; }
 
