@@ -154,6 +154,21 @@
   <ItemGroup>
     <ClInclude Include="header\Global\Config.h" />
     <ClInclude Include="header\Event\EventService.h" />
+<<<<<<< Updated upstream
+=======
+    <ClInclude Include="header\Level\BlockType.h" />
+    <ClInclude Include="header\Level\LevelConfiguration.h" />
+    <ClInclude Include="header\Level\LevelController.h" />
+    <ClInclude Include="header\Level\LevelData.h" />
+    <ClInclude Include="header\Level\LevelModel.h" />
+    <ClInclude Include="header\Level\LevelService.h" />
+    <ClInclude Include="header\Level\LevelView.h" />
+    <ClInclude Include="header\Player\MovementDirection.h" />
+    <ClInclude Include="header\Player\PlayerController.h" />
+    <ClInclude Include="header\Player\PlayerModel.h" />
+    <ClInclude Include="header\Player\PlayerService.h" />
+    <ClInclude Include="header\Player\PlayerView.h" />
+>>>>>>> Stashed changes
     <ClInclude Include="header\Sound\SoundService.h" />
     <ClInclude Include="header\Main\GameService.h" />
     <ClInclude Include="header\Graphics\GraphicService.h" />
