@@ -4,9 +4,11 @@ namespace Player {
 	class PlayerService
 	{
 	private:
-		PlayerController* playe_controller;
+		PlayerController* player_controller;
 
 		void destroy();
+
+		
 
 	public:
 		PlayerService();
@@ -15,5 +17,8 @@ namespace Player {
 		void initialize();
 		void update();
 		void render();
+		void takeDamage();
+		void levelComplete();
+		int getCurrentLives();
 	};
 }

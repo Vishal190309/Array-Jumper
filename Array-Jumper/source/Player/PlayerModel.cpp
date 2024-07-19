@@ -1,4 +1,5 @@
 #include "../../header/Player/PlayerModel.h"
+#include "../../header/Level/BlockType.h"
 
 namespace Player {
 	PlayerModel::PlayerModel()
@@ -29,4 +30,24 @@ namespace Player {
 	{
 		player_state = state;
 	}
+
+	int PlayerModel::getCurrentLives()
+	{
+		return current_lives;
+	}
+
+	void PlayerModel::resetPlayer()
+	{
+		current_lives = max_lives;
+		current_position = 0;
+		player_state = PlayerState::ALIVE;
+	}
+
+	void PlayerModel::resetCurrentPosition() {
+		current_position = 0;
+	}
+
+	void PlayerModel::decrementLife() { current_lives--; }
+
+	
 }
