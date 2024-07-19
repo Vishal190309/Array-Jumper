@@ -6,7 +6,7 @@ namespace Player {
 
 	PlayerController::PlayerController()
 	{
-		playe_model = new PlayerModel();
+		player_model = new PlayerModel();
 		player_view = new PlayerView(this);
 	}
 
@@ -14,8 +14,10 @@ namespace Player {
 
 	void PlayerController::initialize()
 	{
-		playe_model->initialize();
+		player_model->initialize();
 		player_view->initialize();
+
+		resetPlayer();
 	}
 
 	void PlayerController::update()
@@ -28,19 +30,30 @@ namespace Player {
 		player_view->render();
 	}
 
+	int PlayerController::getCurrentPosition()
+	{
+		return player_model->getCurrentPosition();
+	}
+
 	PlayerState PlayerController::getPlayerState()
 	{
-		return playe_model->getPlayerState();
+		return player_model->getPlayerState();
 	}
 
 	void PlayerController::setPlayerState(PlayerState new_player_state)
 	{
-		playe_model->setPlayerState(new_player_state);
+		player_model->setPlayerState(new_player_state);
 	}
 
 	void PlayerController::destroy()
 	{
-		delete(playe_model);
+		delete(player_model);
 		delete(player_view);
+	}
+
+	void PlayerController::resetPlayer()
+	{
+		player_model->setCurrentPosition(0);
+		player_model->setPlayerState(PlayerState::ALIVE);
 	}
 }

@@ -38,11 +38,11 @@ namespace Global
 	void ServiceLocator::initialize()
 	{
 		graphic_service->initialize();
-		player_service->initialize();
-		level_service->initialize();
 		event_service->initialize();
 		sound_service->initialize();
 		ui_service->initialize();
+		level_service->initialize();
+		player_service->initialize();
 	}
 
 	void ServiceLocator::update()
@@ -65,7 +65,7 @@ namespace Global
 		if (GameService::getGameState() == GameState::GAMEPLAY)
 		{
 			level_service->render();
-			//player_service->render();
+			player_service->render();
 			
 		}
 	}

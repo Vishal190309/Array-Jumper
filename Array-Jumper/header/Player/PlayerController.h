@@ -5,10 +5,12 @@ namespace Player {
 	enum class PlayerState;
 	class PlayerController {
 	private:
-		PlayerModel* playe_model;
+		PlayerModel* player_model;
 		PlayerView* player_view;
 
 		void destroy();
+
+		void resetPlayer();
 
 	public:
 		PlayerController();
@@ -17,6 +19,7 @@ namespace Player {
 		void initialize();
 		void update();
 		void render();
+		int getCurrentPosition();
 
 		PlayerState getPlayerState();
 		void setPlayerState(PlayerState new_player_state);

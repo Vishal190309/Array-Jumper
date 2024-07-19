@@ -9,7 +9,6 @@ namespace Player {
 	}
 	void PlayerModel::initialize()
 	{
-		player_state = PlayerState::ALIVE;
 	}
 	void PlayerModel::update()
 	{

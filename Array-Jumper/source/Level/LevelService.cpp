@@ -1,5 +1,8 @@
-#include "../../header/Level/LevelService.h"
+
 #include "../../header/Level/LevelController.h"
+#include "../../header/Level/LevelService.h"
+
+
 
 namespace Level
 {
@@ -9,6 +12,9 @@ namespace Level
 	}
 
 	LevelService::~LevelService() { destroy(); }
+	
+
+
 
 	void LevelService::initialize()
 	{
@@ -24,6 +30,11 @@ namespace Level
 	{
 		level_controller->render();
 	}
+
+	BoxDimensions LevelService::getBoxDimensions() {
+		return level_controller->getBoxDimensions();
+	}
+	
 
 	void LevelService::destroy()
 	{
