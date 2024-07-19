@@ -48,10 +48,10 @@
     <ClCompile Include="source\Player\PlayerView.cpp" />
     <ClCompile Include="source\Player\PlayerController.cpp" />
     <ClCompile Include="source\Player\PlayerService.cpp" />
-    <ClCompile Include="source\Level\LevelMode.cpp" />
     <ClCompile Include="source\Level\LevelView.cpp" />
     <ClCompile Include="source\Level\LevelController.cpp" />
     <ClCompile Include="source\Level\LevelService.cpp" />
+    <ClCompile Include="source\Level\LevelModel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\Main\GameService.h">
@@ -90,6 +90,8 @@
     <ClInclude Include="header\Level\LevelModel.h" />
     <ClInclude Include="header\Level\LevelController.h" />
     <ClInclude Include="header\Level\LevelService.h" />
+    <ClInclude Include="header\Level\BlockType.h" />
+    <ClInclude Include="header\Level\LevelData.h" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="assets\sounds\background_music.mp3" />
