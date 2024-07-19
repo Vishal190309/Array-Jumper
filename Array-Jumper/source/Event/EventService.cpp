@@ -25,6 +25,7 @@ namespace Event
         updateKeyboardButtonsState(right_arrow_button_state, sf::Keyboard::Right);
         updateKeyboardButtonsState(A_button_state, sf::Keyboard::A);
         updateKeyboardButtonsState(D_button_state, sf::Keyboard::D);
+        updateKeyboardButtonsState(space_button_state, sf::Keyboard::Space);
     }
 
     void EventService::processEvents()
@@ -97,6 +98,8 @@ namespace Event
     bool EventService::pressedAKey() { return A_button_state == ButtonState::PRESSED; }
 
     bool EventService::pressedDKey() { return D_button_state == ButtonState::PRESSED; }
+
+    bool EventService::heldSpaceKey() { return space_button_state == ButtonState::HELD; }
 
     bool EventService::pressedLeftMouseButton() { return left_mouse_button_state == ButtonState::PRESSED; }
 

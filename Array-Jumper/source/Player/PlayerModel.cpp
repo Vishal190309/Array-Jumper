@@ -1,4 +1,5 @@
 #include "../../header/Player/PlayerModel.h"
+#include "../../header/Level/BlockType.h"
 
 namespace Player {
 	PlayerModel::PlayerModel()
@@ -29,4 +30,6 @@ namespace Player {
 	{
 		player_state = state;
 	}
+
+	
 }

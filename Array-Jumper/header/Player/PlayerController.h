@@ -25,10 +25,12 @@ namespace Player {
 		void render();
 		void readInput();
 		void move(MovementDirection direction);
+		void jump(MovementDirection direction);
 		bool isPositionInBound(int targetPosition);
 		int getCurrentPosition();
 
 		PlayerState getPlayerState();
 		void setPlayerState(PlayerState new_player_state);
+
 	};
 }
