@@ -31,5 +31,11 @@ namespace Player {
 		player_state = state;
 	}
 
+	void PlayerModel::resetPlayer()
+	{
+		current_position = 0;
+		player_state = PlayerState::ALIVE;
+	}
+
 	
 }

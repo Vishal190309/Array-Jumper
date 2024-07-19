@@ -14,7 +14,6 @@ namespace Player {
 		Event::EventService* event_service;
 		void destroy();
 
-		void resetPlayer();
 
 	public:
 		PlayerController();
@@ -27,6 +26,7 @@ namespace Player {
 		void move(MovementDirection direction);
 		void jump(MovementDirection direction);
 		bool isPositionInBound(int targetPosition);
+		void takeDamage();
 		int getCurrentPosition();
 
 		PlayerState getPlayerState();

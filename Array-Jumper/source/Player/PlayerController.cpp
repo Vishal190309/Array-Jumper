@@ -21,7 +21,7 @@ namespace Player {
 		player_model->initialize();
 		player_view->initialize();
 
-		resetPlayer();
+		player_model->resetPlayer();
 		event_service = Global::ServiceLocator::getInstance()->getEventService();
 	}
 
@@ -75,6 +75,7 @@ namespace Player {
 			return;
 
 		player_model->setCurrentPosition(targetPosition);
+		Global::ServiceLocator::getInstance()->getGameplayService()->onPositionChanged(targetPosition);
 		Global::ServiceLocator::getInstance()->getSoundService()->playSound(Sound::SoundType::MOVE);
 	}
 
@@ -113,6 +114,11 @@ namespace Player {
 		return false;
 	}
 
+	void PlayerController::takeDamage()
+	{
+		player_model->resetPlayer();
+	}
+
 	int PlayerController::getCurrentPosition()
 	{
 		return player_model->getCurrentPosition();
@@ -136,9 +142,5 @@ namespace Player {
 		delete(player_view);
 	}
 
-	void PlayerController::resetPlayer()
-	{
-		player_model->setCurrentPosition(0);
-		player_model->setPlayerState(PlayerState::ALIVE);
-	}
+	
 }
