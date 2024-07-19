@@ -59,6 +59,7 @@ namespace Level
 	{
 		level_controller->reset();
 	}
+	
 
 	void LevelService::destroy()
 	{
